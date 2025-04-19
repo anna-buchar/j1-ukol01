@@ -13,10 +13,10 @@ public class HlavniProgram {
     zofka = new Turtle();
 
     int delkaStrany = 80;
+    int velikostKolecka = 20;
+    int velikostPismen = 100;
 
-    nakreslitPrasatko(delkaStrany);
-
-    //nakreslitSlunicko(20);
+  napisY(velikostPismen);
 
 
 
@@ -80,6 +80,82 @@ public class HlavniProgram {
     zofka.move(delkaStrany);
     zofka.turnRight(90);
     nakreslitDveNozicky(delkaNozicky);
+  }
+
+  public void napisI(int velikostPismen){
+    zofka.penDown();
+    zofka.turnLeft(270);
+    zofka.move(velikostPismen/5);
+    zofka.turnLeft(180);
+    zofka.move((velikostPismen/5)/2);
+    zofka.turnRight(90);
+    zofka.move(velikostPismen);
+    zofka.turnLeft(90);
+    zofka.move((velikostPismen/5)/2);
+    zofka.turnLeft(180);
+    zofka.move(velikostPismen/5);
+
+    zofka.penUp();
+    zofka.move(velikostPismen/3);
+    zofka.turnRight(90);
+    zofka.move(velikostPismen);
+    zofka.turnLeft(180);
+  }
+
+  public void napisN(int velikostPismen){
+    zofka.penDown();
+    zofka.move(velikostPismen);
+    zofka.turnRight(150);
+    zofka.move(velikostPismen*(1.2));
+    zofka.turnLeft(150);
+    zofka.move(velikostPismen);
+
+    zofka.turnRight(90);
+    zofka.penUp();
+    zofka.move(velikostPismen/3);
+    zofka.turnRight(90);
+    zofka.move(velikostPismen);
+    zofka.turnLeft(180);
+  }
+
+  public void napisK(int velikostPismen){
+    zofka.penDown();
+    zofka.move(velikostPismen);
+    zofka.turnRight(180);
+    zofka.move(velikostPismen/2);
+    zofka.turnLeft(30);
+    zofka.move(velikostPismen*(0.57));
+    zofka.turnRight(180);
+    zofka.move(velikostPismen*(0.57));
+    zofka.turnRight(60);
+    zofka.move(velikostPismen*(0.57));
+    zofka.turnRight(60);
+
+    zofka.penUp();
+    zofka.move(velikostPismen/3);
+    zofka.turnRight(90);
+    zofka.move(velikostPismen);
+    zofka.turnLeft(180);
+  }
+
+  public void napisY(int velikostPismen){
+    zofka.penDown();
+    zofka.move((velikostPismen*2)/3);
+    zofka.turnLeft(30);
+    zofka.move((velikostPismen/3)*(0.9));
+    zofka.turnRight(120);
+    zofka.penUp();
+    zofka.move((velikostPismen/3)*(1.1));
+    zofka.turnRight(120);
+    zofka.penDown();
+    zofka.move((velikostPismen/3)*(0.9));
+
+    zofka.penUp();
+    zofka.turnLeft(120);
+    zofka.move(velikostPismen/3);
+    zofka.turnRight(90);
+    zofka.move((velikostPismen*2)/3);
+    zofka.turnRight(180);
   }
 
 }
