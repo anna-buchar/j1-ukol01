@@ -16,7 +16,36 @@ public class HlavniProgram {
     int velikostKolecka = 20;
     int velikostPismen = 100;
 
-  napisY(velikostPismen);
+    zofka.turnRight(180);
+    zofka.penUp();
+    zofka.move(60);
+    zofka.turnRight(180);
+    nakreslitPrasatko(delkaStrany);
+
+    zofka.penUp();
+    zofka.turnRight(45);
+    zofka.move(delkaStrany+50);
+
+    zofka.penDown();
+    zofka.turnLeft(90);
+    nakreslitDomecek(delkaStrany);
+
+    zofka.turnRight(45);
+    zofka.turnRight(180);
+    zofka.penUp();
+    zofka.move(delkaStrany);
+    zofka.turnLeft(90);
+    zofka.move(delkaStrany);
+
+    zofka.penDown();
+    zofka.turnRight(90);
+    nakreslitDomecek(delkaStrany);
+
+    //zofka.move(delkaStrany);
+    //zofka.penUp();
+    //zofka.turnRight(90);
+    //zofka.move(delkaStrany);
+    //zofka.move(delkaStrany/2);
 
 
 
@@ -34,6 +63,7 @@ public class HlavniProgram {
   }
 
   public void nakreslitSlunicko(int velikostKolecka){
+    zofka.penDown();
     for (int i = 0; i < 12; i++) {
         zofka.move(velikostKolecka);
         zofka.turnRight(15);
@@ -70,6 +100,7 @@ public class HlavniProgram {
   }
 
   public void nakreslitPrasatko(int delkaStrany) {
+    zofka.penDown();
     int delkaNozicky = delkaStrany / 5;
     zofka.turnLeft(90);
     nakreslitDomecek(delkaStrany);
