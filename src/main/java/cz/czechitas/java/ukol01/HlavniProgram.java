@@ -12,10 +12,12 @@ public class HlavniProgram {
   public void start() {
     zofka = new Turtle();
 
+    //rozmery
     int delkaStrany = 80;
-    int velikostKolecka = 20;
+    int velikostKolecka = 10;
     int velikostPismen = 100;
 
+    //prasatko
     zofka.turnRight(180);
     zofka.penUp();
     zofka.move(60);
@@ -26,6 +28,7 @@ public class HlavniProgram {
     zofka.turnRight(45);
     zofka.move(delkaStrany+50);
 
+    //domecek dole vpravo
     zofka.penDown();
     zofka.turnLeft(90);
     nakreslitDomecek(delkaStrany);
@@ -37,15 +40,59 @@ public class HlavniProgram {
     zofka.turnLeft(90);
     zofka.move(delkaStrany);
 
+    //pet domecku
     zofka.penDown();
     zofka.turnRight(90);
     nakreslitDomecek(delkaStrany);
 
-    //zofka.move(delkaStrany);
-    //zofka.penUp();
-    //zofka.turnRight(90);
-    //zofka.move(delkaStrany);
-    //zofka.move(delkaStrany/2);
+    for (int i = 0; i < 4; i++) {
+      zofka.turnRight(135);
+      zofka.penUp();
+      zofka.move(delkaStrany);
+      zofka.move(delkaStrany/2);
+      zofka.turnLeft(90);
+      zofka.move(delkaStrany);
+      zofka.turnRight(90);
+      zofka.move(delkaStrany);
+      zofka.turnRight(90);
+      zofka.penDown();
+      nakreslitDomecek(delkaStrany);
+    }
+
+    //domecek dole vlevo
+    zofka.turnRight(135);
+    zofka.penUp();
+    zofka.move(delkaStrany);
+    zofka.turnLeft(90);
+    for (int i = 0; i < 3; i++) {
+      zofka.move(delkaStrany);
+    }
+    zofka.turnRight(180);
+    zofka.penDown();
+    nakreslitDomecek(delkaStrany);
+    zofka.turnRight(135);
+    zofka.penUp();
+
+    zofka.move(delkaStrany);
+    zofka.turnLeft(90);
+    zofka.move(delkaStrany*3);
+    zofka.turnLeft(90);
+    zofka.move(delkaStrany);
+    zofka.turnLeft(90);
+
+    //podpis
+    napisI(velikostPismen);
+    napisN(velikostPismen);
+    napisK(velikostPismen);
+    napisY(velikostPismen);
+
+    //slunicko
+    zofka.move(velikostPismen);
+    zofka.move(delkaStrany*4);
+    zofka.turnLeft(90);
+    zofka.move(delkaStrany*5);
+    nakreslitSlunicko(velikostKolecka);
+
 
 
 
@@ -74,6 +121,7 @@ public class HlavniProgram {
   }
 
   public void nakreslitDomecek(int stranaDomecku) {
+    zofka.penDown();
     for (int i = 0; i < 4; i++) {
       zofka.move(stranaDomecku);
       zofka.turnRight(90);
